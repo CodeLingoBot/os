@@ -22,7 +22,7 @@ import (
 	"golang.org/x/net/context"
 )
 
-// You can't shutdown the system from a process in console because we want to stop the console container.
+// runDocker; You can't shutdown the system from a process in console because we want to stop the console container.
 // If you do that you kill yourself.  So we spawn a separate container to do power operations
 // This can up because on shutdown we want ssh to gracefully die, terminating ssh connections and not just hanging tcp session
 //

@@ -79,7 +79,7 @@ func (ms MetadataService) AvailabilityChanges() bool {
 	return false
 }
 
-// Parse IPv4 netmask written in IP form (e.g. "255.255.255.0").
+// ipmask; Parse IPv4 netmask written in IP form (e.g. "255.255.255.0").
 func ipmask(addr *Address) string {
 	ip := net.ParseIP(addr.IPAddress)
 	var mask net.IPMask

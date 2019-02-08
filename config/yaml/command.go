@@ -27,6 +27,7 @@ func (s *StringandSlice) UnmarshalYAML(tag string, value interface{}) error {
 	return nil
 }
 
+// toStrings; 
 // TODO: use this function from libcompose
 func toStrings(s []interface{}) ([]string, error) {
 	if len(s) == 0 {

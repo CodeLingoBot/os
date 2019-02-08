@@ -38,7 +38,7 @@ func TestExpBackoff(t *testing.T) {
 	}
 }
 
-// Test exponential backoff and that it continues retrying if a 5xx response is
+// TestGetURLExpBackOff tests exponential backoff and that it continues retrying if a 5xx response is
 // received
 func TestGetURLExpBackOff(t *testing.T) {
 	var expBackoffTests = []struct {
@@ -80,7 +80,7 @@ func TestGetURLExpBackOff(t *testing.T) {
 	}
 }
 
-// Test that it stops retrying if a 4xx response comes back
+// TestGetURL4xx tests that it stops retrying if a 4xx response comes back
 func TestGetURL4xx(t *testing.T) {
 	client := NewHTTPClient()
 	retries := 0
@@ -100,7 +100,7 @@ func TestGetURL4xx(t *testing.T) {
 	}
 }
 
-// Test that it fetches and returns user-data just fine
+// TestGetURL2xx tests that it fetches and returns user-data just fine
 func TestGetURL2xx(t *testing.T) {
 	var cloudcfg = `
 #cloud-config
@@ -131,7 +131,7 @@ coreos:
 	}
 }
 
-// Test attempt to fetching using malformed URL
+// TestGetMalformedURL tests attempt to fetching using malformed URL
 func TestGetMalformedURL(t *testing.T) {
 	client := NewHTTPClient()
 

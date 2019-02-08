@@ -37,6 +37,7 @@ var validKey = regexp.MustCompile(`^[a-zA-Z0-9_]+$`)
 // match each line, optionally capturing valid identifiers, discarding dos line endings
 var lineLexer = regexp.MustCompile(`(?m)^((?:([a-zA-Z0-9_]+)=)?.*?)\r?\n`)
 
+// mergeEnvContents; 
 // mergeEnvContents: Update the existing file contents with new values,
 // preserving variable ordering and all content this code doesn't understand.
 // All new values are appended to the bottom of the old, sorted by key.

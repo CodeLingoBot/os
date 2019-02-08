@@ -267,7 +267,7 @@ func TestWriteEnvFileUpdateDos(t *testing.T) {
 	}
 }
 
-// A middle ground noop, values are unchanged but we did have a value.
+// TestWriteEnvFileDos2Unix checks a case when A middle ground noop, values are unchanged but we did have a value.
 // Seems reasonable to rewrite the file in Unix format anyway.
 func TestWriteEnvFileDos2Unix(t *testing.T) {
 	dir, err := ioutil.TempDir(os.TempDir(), "coreos-cloudinit-")
@@ -316,7 +316,7 @@ func TestWriteEnvFileDos2Unix(t *testing.T) {
 	}
 }
 
-// If it really is a noop (structure is empty) don't even do dos2unix
+// TestWriteEnvFileEmpty checks a case when If it really is a noop (structure is empty) don't even do dos2unix
 func TestWriteEnvFileEmpty(t *testing.T) {
 	dir, err := ioutil.TempDir(os.TempDir(), "coreos-cloudinit-")
 	if err != nil {
@@ -364,7 +364,7 @@ func TestWriteEnvFileEmpty(t *testing.T) {
 	}
 }
 
-// no point in creating empty files
+// TestWriteEnvFileEmptyNoCreate checks a case when no point in creating empty files
 func TestWriteEnvFileEmptyNoCreate(t *testing.T) {
 	dir, err := ioutil.TempDir(os.TempDir(), "coreos-cloudinit-")
 	if err != nil {

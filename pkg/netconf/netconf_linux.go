@@ -387,7 +387,7 @@ func removeAddress(addr netlink.Addr, link netlink.Link) error {
 	return nil
 }
 
-// setGateway(add=false) will set _one_ gateway on an interface (ie, replace an existing one)
+// setGateway will set _one_ gateway on an interface (ie, replace an existing one)
 // setGateway(add=true) will add another gateway to an interface
 func setGateway(gateway string, add bool) error {
 	if gateway == "" {

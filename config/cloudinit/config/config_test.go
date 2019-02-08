@@ -248,7 +248,7 @@ hostname:
 	}
 }
 
-// Assert that the parsing of a cloud config file "generally works"
+// TestCloudConfigEmpty checks a case when Assert that the parsing of a cloud config file "generally works"
 func TestCloudConfigEmpty(t *testing.T) {
 	cfg, err := NewCloudConfig("")
 	if err != nil {
@@ -269,7 +269,7 @@ func TestCloudConfigEmpty(t *testing.T) {
 	}
 }
 
-// Assert that the parsing of a cloud config file "generally works"
+// TestCloudConfig checks a case when Assert that the parsing of a cloud config file "generally works"
 func TestCloudConfig(t *testing.T) {
 	contents := `
 coreos: 
@@ -376,7 +376,7 @@ Address=10.209.171.177/19
 	}
 }
 
-// Assert that our interface conversion doesn't panic
+// TestCloudConfigKeysNotList checks a case when Assert that our interface conversion doesn't panic
 func TestCloudConfigKeysNotList(t *testing.T) {
 	contents := `
 ssh_authorized_keys:

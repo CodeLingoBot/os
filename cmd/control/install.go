@@ -598,7 +598,7 @@ func layDownOS(image, installType, cloudConfig, device, partition, statedir, kap
 	return nil
 }
 
-// files is an array of 'sourcefile:destination' - but i've not seen any examples of it being used.
+// seedData files is an array of 'sourcefile:destination' - but i've not seen any examples of it being used.
 func seedData(baseName, cloudData string, files []string) error {
 	log.Debugf("seedData")
 	_, err := os.Stat(baseName)
@@ -655,7 +655,7 @@ func seedData(baseName, cloudData string, files []string) error {
 	return nil
 }
 
-// set-disk-partitions is called with device ==  **/dev/sda**
+// setDiskpartitions; set-disk-partitions is called with device ==  **/dev/sda**
 func setDiskpartitions(device, diskType string) error {
 	log.Debugf("setDiskpartitions")
 
